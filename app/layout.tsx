@@ -1,3 +1,6 @@
+import { inter } from "./ui/fonts";
+import "/app/ui/global.css"
+import NavLinks from './ui/dashboard/nav-links';
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +8,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${inter.className} antialiased`}>
+      <NavLinks/>
+        {children}</body>
     </html>
   );
 }
